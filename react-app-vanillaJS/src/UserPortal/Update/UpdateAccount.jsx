@@ -1,6 +1,8 @@
 import style from './Update.module.css';
 import { useState, useRef } from 'react';
 
+const API_URL = import.meta.env.VITE_API_BASE_URL;
+
 
 
 
@@ -24,7 +26,7 @@ function Update({newUsernameUpdate}){
 
 
         try{
-            const response = await fetch("http://127.0.0.1:8000/userUpdateAccount", {
+            const response = await fetch(`${API_URL}/userUpdateAccount`, {
                 method: "PATCH",
                 credentials: "include",
                 headers: {

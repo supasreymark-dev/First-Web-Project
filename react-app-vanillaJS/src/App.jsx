@@ -4,6 +4,9 @@ import HEADER from './UserPortal/Header/Header.jsx';
 import style from './App.module.css';
 import MAINBODY from './UserPortal/MainBody/MainBody.jsx';
 
+const API_URL = import.meta.env.VITE_API_BASE_URL;
+
+
 function VerifyUser({isTrue, username}){
   if(!isTrue){
     return(
@@ -23,7 +26,7 @@ function VerifyUser({isTrue, username}){
 }
 
 function App() {
-  const API_URL = "http://127.0.0.1:8000";
+  // const API_URL = "http://127.0.0.1:8000";
   const [username, setUsername] = useState('Guest');
   const [isTrue, setTrue] = useState(false);
   const [activeTab, setActiveTab] = useState("about");
