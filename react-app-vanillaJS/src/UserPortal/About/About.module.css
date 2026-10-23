@@ -1,0 +1,48 @@
+.body{
+    flex: 1;
+    /* border: 2px solid red; */
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 2vw;
+}
+
+.header{
+
+    margin-top: 1vw;
+    width: 100%;
+    text-align: center;
+}
+
+.header hr{
+    margin: 1vw;
+}
+
+.paragraph{
+    display: flex;
+    text-align: justify;
+    /* border: 1px solid red; */
+    text-indent: 30px;
+    /* margin: clamp(2rem, 2vw, 3rem) clamp(2rem, 4vw, 3rem); */
+    margin-top: clamp(2rem, 2vw, 2rem);
+    margin-bottom: 0;
+    margin-left: clamp(2rem, 4vw, 3rem);
+    margin-right: clamp(2rem, 4vw, 3rem);
+    line-height: 1.5;
+    letter-spacing: 0.6px;
+    word-spacing: 2px;
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    font-weight: 100;
+}
+
+.Dev{
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid red; */
+}
+
+.devName{
+    font-weight: bold;
+}

@@ -1,0 +1,28 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  min-height: 100vh;
+  /* border: 1px solid red; */
+
+}
+
+:root{
+  --accent-font-color: #C7CDD9;
+  --accent-color: rgba(0, 0, 0, 0.2);
+  --accent-font: Calibri;
+  --opacity: 40%;
+  --bd-color: rgba(0, 0, 0, 0.4);
+  --bg-color: rgba(0, 0, 0, 0.05);
+  --soft-bg-color: #0D0081;
+  background-color: black;
+  font-weight: bold;
+}
+

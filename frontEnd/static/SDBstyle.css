@@ -1,0 +1,234 @@
+html{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Calibri;
+}
+
+body{
+    min-height: 100vh;
+}
+
+.dashboard{
+    position: relative;
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.nav-button{
+    /* border: 1px solid white; */
+    display: flex;
+    /* justify-content: right; */
+}
+
+.nav-button button{
+    padding: 0.2vw 0.5vw;
+    margin: 0.1vw 0.2vw;
+    outline: none;
+    /* border-style: none; */
+}
+
+.dashboard h1{
+    text-align: center;
+    padding-top: clamp(0.7rem, 2vw, 1rem);
+}
+
+#viewer{
+    border: 1px solid black;
+    padding: clamp(0.2rem, 0.6vw, 0.3rem) clamp(0.3rem, 0.8vw, 0.5rem);
+}
+
+#viewerUsername{
+    color: red;
+}
+
+.feature-container{
+    position: relative;
+    border: 1px solid black;
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    width: 100%;
+    /* height: 100%; */
+    flex: 1;
+}
+
+.analysis span{
+    margin: auto auto;
+    /* width: 100%; */
+    color: red;
+    font-weight: bold;
+    font-size: 3vw;
+}
+
+#loading-screen{
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.07);
+    backdrop-filter: blur(1px);
+    /* background-color: black;
+    opacity: 10%; */
+}
+
+#loading-screen div{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#loading-screen span{
+    background: transparent;
+    position: absolute;
+    font-size: 30vw;
+    opacity: 100%;
+    animation: spin 0.4s linear infinite;
+}
+
+#loading-screen.active{
+    display: flex;
+}
+
+/* #loading-animation{
+    position: relative;
+    animation: spin 5s linear infinite;
+} */
+
+@keyframes spin{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.analysis, .list-of-attempt{
+    flex: 1;
+    border: 1px solid black;
+}
+
+.analysis{
+    display: flex;
+    justify-content: space-evenly;
+    /* align-items: center; */
+    flex-direction: column;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+.list-of-attempt table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 0.4vw 1vw;
+}
+
+.list-of-attempt td{
+    text-align: center;
+}
+
+.list-of-attempt table{
+    /* margin-top: 2vw; */
+    width: 100%;
+}
+
+.analysis p{
+    /* gap: clamp(0.5rem, 1vw, 1.2rem); */
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: clamp(0.5rem, 1vw, 1rem) 0;
+}
+
+#change-pass-dialog{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    padding: 1vw 2vw;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; */
+}
+
+#change-pass-dialog::backdrop{
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(2px);
+}
+
+#change-pass-dialog h2{
+    text-align: center;
+    margin-bottom: 2vw;
+}
+
+#dialogForm{
+    /* border: 2px solid red; */
+    font-size: clamp(1.3rem, 4vw, 1.6rem);
+}
+
+.inputField{
+    display: flex;
+    justify-content: space-between;
+    /* border: 2px solid green; */
+    padding: clamp(0.4rem, 1vw, 0.7rem);
+}
+
+.inputField label{
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    margin-right: 0.4vw;
+}
+
+.inputField input{
+    /* width: 100%; */
+    padding: clamp(0.1rem, 0.7vw, 0.4rem) clamp(0.4rem, 1vw, 0.6rem);
+    font-size: clamp(1.3rem, 4vw, 1.6rem);
+}
+
+.buttons{
+    margin-top: 2vw;
+    /* border: 1px solid green; */
+    text-align: center;
+
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.buttons button{
+    outline: none;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 4px;
+    font-size: clamp(1.3rem, 4vw, 1.6rem);
+    padding: clamp(0.2rem, 0.7vw, 0.3rem) clamp(0.3rem, 1vw, 0.5rem);
+    transition: background-color 0.3s ease;
+}
+
+.buttons button:focus{
+    outline-width: 1px;
+    outline-color: black;
+    outline-style: solid;
+}
+
+.buttons button:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.1);
+}

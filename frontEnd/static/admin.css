@@ -1,0 +1,146 @@
+html{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: Calibri;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+}
+
+.wrapper{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* =============================================== */
+/*            SPINING ANIMATION                    */
+/* =============================================== */
+
+.logo{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* border: 2px solid red; */
+    top: 20px;
+    font-size: clamp(2rem, 5vw, 3rem);
+
+}
+
+
+
+.logo{
+    animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.logo span{
+    text-align: center;
+}
+
+/* =============================================== */
+
+
+
+.container{
+    text-align: center;
+    border: 1px solid black;
+    padding: clamp(0.6rem, 2vw, 1rem) clamp(1rem, 3vw, 1.5rem);
+}
+
+.container h2{
+    font-size: clamp(1.5rem, 4vw, 3rem);
+}
+
+.container #errorMessage{
+    display: none;
+    color: red;
+    margin-top: 2vw;
+    font-size: clamp(0.4rem, 1.7vw, 2rem);
+}
+
+#errorMessage.hidden{
+    display: block;
+}
+
+.container form{
+    margin-top: 2vw;
+    /* border: 1px solid black; */
+}
+
+.container form div{
+    text-align: left;
+    width: 100%;
+}
+
+.container form .passwordField{
+    margin-top: 25px;
+    margin-bottom: clamp(0.8rem, 2vw, 1.3rem);
+}
+
+.container form div label{
+    font-size: clamp(0.7rem, 1.3vw, 1.5rem);
+}
+
+.container form div input{
+    display: block;
+    width: 100%;
+    font-size: clamp(1.2rem, 2.2vw, 1.8rem);
+    padding: clamp(0.5rem, 0.5vw, 0.8rem) clamp(0.6rem, 1vw, 1rem);
+}
+
+.container form div input:focus{
+    outline: 2px solid skyblue;
+}
+
+#logIn{
+    /* margin-top: clamp(0.8rem, 2vw, 1.3rem); */
+    font-size: clamp(1rem, 2vw, 2rem);
+    padding: clamp(0.2rem, 1vw, 0.3rem) clamp(0.4rem, 1.5vw, 1rem);
+    border-radius: 20px;
+    outline: none;
+    border: 1px solid black;
+    transition: background-color 0.3s ease;
+}
+
+#logIn:focus{
+    outline-width: 2px;
+    outline-style: solid;
+    outline-color: skyblue;
+}
+
+#logIn:hover{
+    cursor: pointer;
+    /* outline: 2px solid skyblue; */
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.time-and-date{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 400;
+    /* font-family: "DS-Digital"; */
+    text-align: center;
+    margin-top: 1.7vw;
+    font-size: clamp(0.8rem, 1.7vw, 1.8rem);
+}

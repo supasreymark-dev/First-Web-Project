@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>User Page</title>
+
+            <link rel="stylesheet" href="/UserPageStatic/user.css">
+        </head>
+
+        <body>
+            
+            <div class="wrapper">
+                <div class="container">
+                    <h1>Log In</h1>
+                    <h3 id="errorMessage" class="hidden">Invalid Username or Password, Please try again!</h3>
+                    <form id="login-form">
+                        <div class="usernameField field">
+                            <label for="username" class="usernameLabel">Username</label>
+                            <input type="text" id="username" placeholder=" " required>
+                        </div>
+
+                        <div class="passwordField field">
+                            <label for="password" class="passwordLabel">Password</label>
+                            <input type="password" id="password" placeholder=" " required>
+                        </div>
+
+                        <p>Don't have an account? <a href="/SignUp">Sign Up</a></p>
+
+                        <button id="log-in-btn">Log In</button>
+                    </form>
+                </div>
+            </div>
+
+            <script src="/config/config.js"></script>
+            <script src="/UserPageStatic/user.js"></script>
+        </body>
+    </html>

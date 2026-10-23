@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Security Dashboard</title>
+            <link rel="stylesheet" href="/static/SDBstyle.css">
+
+        </head>
+
+        <body>
+            
+            <div class="dashboard">
+                <div>
+                    <h1>SECURITY MONITOR</h1> 
+                    <div class="nav-button">
+                        <span id="viewer">Viewer : <span id="viewerUsername"></span></span>
+                        <button id="refresh" type="button">Refresh</button>
+                        <button id="change-pass">Change Password</button>
+                        <button id="logout-btn">Logout</button>
+                    </div>
+                </div>
+
+                <div class="feature-container">
+                    <div class="analysis">
+                        <p>Total Events    : <span id="totalEventsLabel">0</span></p>
+                        <hr>
+                        <p>Failed Logins   : <span id="failedLoginLabel">0</span></p>
+                        <hr>
+                        <p>Suspicious IPs  : <span id="suspiciousIPLabel">0</span></p>
+                        <hr>
+                        <p>Critical Alerts : <span id="criticalAlertsLabel">0</span></p>
+                    </div>
+
+                    <div class="list-of-attempt">
+                        <table id="event-table">
+                            <tr>
+                                <th>IP Address</th>
+                                <th>Attempts</th>
+                                <th>Severity</th>
+                            </tr>
+                            
+                        </table>
+
+                    </div>
+
+                    <div id="loading-screen">
+                        <div>
+                            <span id="loading-animation">|</span>
+                        </div>
+                    </div>
+
+                </div>
+            
+                <dialog id="change-pass-dialog">
+                    <h2>Change Password</h2>
+
+                    <form id="dialogForm">
+
+                        <div class="usernameField inputField">
+                            <label for="username">Username</label>
+                            <input type="text" id="username" required>
+                        </div>
+
+                        <div class="passwordField inputField">
+                            <label for="password">Old Password</label>
+                            <input type="password" id="password" required>
+                        </div>
+
+                        <div class="newPassField inputField">
+                            <label for="newPass">New Password</label>
+                            <input type="password" id="newPass" required>
+                        </div>
+
+                        <div class="confirmPassField inputField">
+                            <label for="confirmPass">Confirm Password</label>
+                            <input type="password" id="confirmPass" required>
+                        </div>
+
+                        <div class="buttons">
+                            <button id="confirmChange-btn" type="submit">Confirm</button>
+                            <button id="cancel-btn" type="click">Cancel</button>
+                        </div>
+                    </form>
+
+                </dialog>
+
+            </div>
+
+            <script src="/config/config.js"></script>
+            <script src="/static/SDBstyle.js"></script>
+        </body>
+    </html>

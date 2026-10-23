@@ -1,0 +1,101 @@
+/* 
+.header{
+    display: flex;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    justify-content: space-evenly;
+    align-items: center;
+    color: var(--accent-font-color);
+
+    background-color: var(--soft-bg-color);
+
+    padding: clamp(1rem, 2vw, 2rem);
+    gap: clamp(1rem, 5.5vw, 3rem);
+    white-space: nowrap;
+
+    min-width: 900px;
+    box-sizing: border-box;
+    box-shadow: 0 -10px 23px 4px rgba(255, 255, 255, 0.8);
+}
+
+.Profile{
+    font-family: var(--accent-font);
+}
+
+
+.header button{
+    font-weight: bold;
+    color: var(--accent-font-color);
+    font-family: var(--accent-font);
+    flex: 0 0 120px;
+    
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: clamp(0.2rem, 1vw, 0.4rem) clamp(0.5rem, 2vw, 0.8rem);
+    outline: none;
+    border-width: 2px;
+    border-color: transparent;
+    border-style: solid;
+    border-radius: 5px;
+    transition: border-color 0.3s ease,
+                border-style 0.3s ease,
+                border-width 0.3s ease;
+}
+
+.header button:hover{
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+}
+ */
+
+
+
+.header {
+    display: flex;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    color: var(--accent-font-color);
+    background-color: var(--soft-bg-color);
+
+    padding: clamp(0.5rem, 2vw, 2rem);
+    gap: clamp(0.5rem, 2vw, 1.5rem);
+
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 -10px 23px 4px rgba(255, 255, 255, 0.8);
+
+}
+
+.Profile {
+    font-family: var(--accent-font);
+}
+
+.header button {
+    font-weight: bold;
+    color: var(--accent-font-color);
+    font-family: var(--accent-font);
+
+    flex: 1 1 120px;
+    min-width: 0;
+
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: clamp(0.2rem, 1vw, 0.4rem)
+            clamp(0.5rem, 2vw, 0.8rem);
+
+    outline: none;
+    border: 2px solid transparent;
+    border-radius: 5px;
+
+    white-space: normal;
+    overflow-wrap: anywhere;
+
+    transition: border-color 0.3s ease;
+
+}
+
+.header button:hover {
+    border-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+}

@@ -1,0 +1,302 @@
+.body{
+    flex: 1;
+    /* border: 2px solid red; */
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 2vw;
+}
+
+.header{
+
+    margin-top: 1vw;
+    width: 100%;
+    text-align: center;
+}
+
+.header hr{
+    margin: 1vw;
+}
+
+.buttons button:focus{
+    outline: 1px solid blue;
+    cursor: pointer;
+    background-color: var(--accent-font-color);
+}
+
+.inputFields input:focus{
+    outline: 1px solid blue;
+}
+
+
+.errorMsg{
+    visibility: hidden;
+    /* border-radius: 20px; */
+    color: red;
+    border: 1px solid red;
+    width: 50%;
+    margin:0 auto;
+    text-align: center;
+}
+
+.errorMsg span{
+    margin: 0 auto;
+    display: flex;
+    /* border: 1px solid yellow; */
+    text-align: center;
+}
+
+
+.errorMsg.active{
+    visibility: visible;
+    display: flex;
+}
+
+@media (min-width: 601px) {
+    .wrapper{
+        flex: 1;
+        /* border: 1px solid yellow; */
+        width: 100%;
+        display: flex;
+        /* align-items: center;
+        justify-content: center; */
+    }
+
+    .forms{
+        /* border: 1px solid blue; */
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex: 1;
+        padding-left: clamp(1rem, 2vw, 2rem);
+        padding-right: clamp(1rem, 2vw, 2rem);
+    }
+
+    .forms input{
+        outline: none;
+        border: 1px solid #1C068A;
+        background-color: #05011C;
+        color: var(--accent-font-color);
+    }
+
+    .forms label{
+        text-indent: 4px;
+    }
+
+    .forms .inputFields{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        flex: 1;
+        /* border: 1px solid yellow; */
+    }
+
+    .inputFields .verifyInfo{
+        /* border: 1px solid red; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* gap: 5vw; */
+    }
+
+    .verifyInfo > div{
+        padding: clamp(0.6rem, 1vw, 1.6rem);
+        /* border: 1px solid yellow; */
+        /* gap: 3vw; */
+        text-align: left;
+    }
+
+    .verifyInfo label{
+        display: block;
+        text-align: left;
+        font-size: clamp(0.8rem, 2vw, 1.6rem);
+    }
+
+    .verifyInfo input{
+        width: 80%;
+        font-size: clamp(1rem, 2vw, 1.7rem);
+        padding: clamp(0.5rem, 0.7vw, 1rem);
+    }
+
+    .hidden{
+        display: none;
+    }
+
+    .inputFields .newInfo{
+        /* border: 1px solid green; */
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .newInfo > div{
+        width: 100%;
+        /* border: 1px solid red; */
+        flex: 1;
+
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .newInfo label{
+        margin-bottom: clamp(0.4rem, 0.5vw, 0.6rem);
+    }
+
+    .newInfo input{
+        width: 95%;
+        padding: clamp(0.5rem, 0.7vw, 1rem);
+        font-size: clamp(1rem, 1.7vw, 1.5rem);
+    }
+
+    .buttons{
+        margin-top: clamp(1rem, 2vw, 2rem);
+        /* border: 1px solid red; */
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 40%;
+    }
+
+    .buttons button{
+        border: 1px solid #1C068A;
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.4);
+        padding: clamp(0.3rem, 0.4vw, 0.7rem);
+        font-size: 1.2vw;
+        font-family: var(--accent-font);
+        font-weight: bold;
+
+        transition: background-color 0.3s ease;
+    }
+
+    .buttons button:hover{
+        cursor: pointer;
+        background-color: var(--accent-font-color);
+    }
+}
+
+@media (max-width: 600px) {
+    .wrapper{
+        flex: 1;
+        width: 100%;
+        /* border: 1px solid red; */
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .forms{
+        width: 100%;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        /* border: 1px solid yellow; */
+    }
+
+    .forms input{
+        outline: none;
+        border: 1px solid #1C068A;
+        background-color: #05011C;
+        color: var(--accent-font-color);
+    }
+
+    .inputFields{
+        /* width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex: 1; */
+    }
+
+    .verifyInfo{
+        /* border: 1px solid red; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 5vw;
+        /* margin: clamp(0.6rem, 1vw, 1rem) clamp(1rem, 2vw, 1.5rem); */
+        
+    }
+
+    .verifyInfo div{
+        flex: 1;
+        text-align: left;
+        padding: clamp(0.6rem, 1vw, 1rem) clamp(0.3rem, 2vw, 1.5rem);
+        /* border: 1px solid red; */
+    }
+
+    .verifyInfo label{
+        font-size: clamp(0.8rem, 3vw, 1.5rem);
+    }
+
+    .verifyInfo input{
+        width: 100%;
+        font-family: clamp(0.5rem, 1.5vw, 2rem);
+        padding: clamp(0.2rem, 0.7vw, 0.7rem) clamp(0.6rem, 1.5vw, 1.6rem);
+        font-size: clamp(1rem, 3.5vw, 1.8rem);
+        outline: none;
+    }
+
+    .hidden{
+        display: block;
+        color: wheat;
+    }
+
+    .newInfo{
+        /* border: 1px solid yellow; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-left: clamp(0.5rem, 0.7vw, 0.8rem);
+        padding-right: clamp(0.5rem, 0.7vw, 0.8rem);
+    }
+
+    .newInfo > div{
+        /* border: 1px solid red; */
+        flex: 1;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 3.5vw;
+    }
+
+    .newInfo label{
+        font-size: clamp(1rem, 1vw, 1.4rem);
+    }
+
+    .newInfo input{
+        width: 100%;
+        font-family: clamp(0.5rem, 1.5vw, 2rem);
+        padding: clamp(0.2rem, 0.7vw, 0.7rem) clamp(0.6rem, 1.5vw, 1.6rem);
+        font-size: clamp(1rem, 3.5vw, 1.8rem);
+        outline: none;
+    }
+
+    .buttons{
+        /* border: 1px solid red; */
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .buttons button{
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 5px;
+        font-size: clamp(0.4rem, 3.5vw, 1.4rem);
+        font-family: Calibri;
+        font-weight: bold;
+        outline: none;
+        border-style: none;
+        padding: clamp(0.2rem, 0.5vw, 0.5rem) clamp(0.5rem, 1vw, 1rem);
+    }
+}

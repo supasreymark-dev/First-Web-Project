@@ -1,0 +1,185 @@
+.body{
+    flex: 1;
+    /* border: 2px solid red; */
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 2vw;
+}
+
+.header{
+
+    margin-top: 1vw;
+    width: 100%;
+    text-align: center;
+}
+
+.header hr{
+    margin: 1vw;
+}
+
+.content{
+    /* border: 1px solid yellow; */
+    position: relative;
+    width: 100%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logo{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+
+.warning{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid orange; */
+    font-size: clamp(1rem, 2.5vw, 2rem);
+    color: orange;
+    flex-direction: column;
+}
+
+.warning span{
+    /* border: 1px solid red; */
+}
+
+.caution{
+    /* border: 1px solid red; */
+    width: 70%;
+    line-height: 1.5;
+    letter-spacing: 0.6px;
+    word-spacing: 2px;
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    font-weight: 100;
+
+    margin-top: 2vw;
+}
+
+.caution1{
+    margin-top: 1.5vw;
+    font-weight: bold;
+}
+
+.caution hr{
+}
+
+.deleteBtn1{
+    border-style: none;
+    outline: none;
+    margin-top: 0.3vw;
+    padding: clamp(0.4rem, 0.5vw, 0.8rem) clamp(1rem, 1vw, 2rem);
+    font-family: Calibri;
+    font-size: clamp(1rem, 1.3vw, 1.5rem);
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.deleteBtn1:hover{
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.deleteBtn1:focus{
+    outline: 1px solid blue;
+}
+
+.confirmationDialog{
+    color: var(--accent-font-color);
+    border: 1px solid blue;
+    outline: 5px solid black;
+    background-color: black;
+    border-radius: 10px;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.confirmationDialog::backdrop{
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(2px);
+}
+
+.buttons{
+    display: flex;
+    /* border: 1px solid red; */
+    align-items: center;
+    justify-content: space-evenly;
+    width: 60%;
+    outline: none;
+    margin: 0 auto;
+    
+    /* border-style: none; */
+}
+
+.buttons > button{
+    font-family: Calibri;
+    color: var(--accent-font-color);
+    outline: none;
+    border-style: none;
+    background-color: var(--soft-bg-color);
+    border: 1px solid var(--accent-font-color);
+    border-radius: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.buttons > button:hover{
+    cursor: pointer;
+    background-color: #1909ae;
+}
+
+.buttons > button:focus{
+    outline: 2px solid white;
+}
+
+@media (min-width: 601px) {
+    .confirmationDialog{
+        padding: clamp(0.7rem, 2vw, 1.8rem);
+        font-size: clamp(1rem, 1.7vw, 2rem);
+        white-space: nowrap;
+    }    
+
+    .buttons button{
+        margin-top: 1vw;
+        font-size: clamp(1rem, 2vw, 2rem);
+        padding: clamp(0.2rem, 0.3vw, 0.6rem) clamp(0.8rem, 1vw, 1rem);
+    }
+}
+
+@media (max-width: 600px){
+    .confirmationDialog{
+        padding: clamp(0.4rem, 1vw, 1.5rem);
+        /* white-space: normal; */
+    }
+
+    .confirmationDialog p{
+        padding: clamp(0.7rem, 1vw, 1rem);
+        overflow-wrap: anywhere;
+    }
+
+    .buttons{
+        position: relative;
+        /* border: 1px solid red; */
+        white-space: nowrap;
+        margin-bottom: 1vw;
+    }
+
+    .buttons button{
+        position: inherit;
+        padding: clamp(0.5rem, 0.6vw, 1rem) clamp(0.6rem, 1.2vw, 1.2rem);
+        /* margin-bottom: 1vw; */
+        font-size: clamp(0.6rem, 1vw, 1.2rem);
+        margin: 0 auto;
+        white-space: nowrap;
+        flex-wrap: nowrap;
+    }
+
+}
