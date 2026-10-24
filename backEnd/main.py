@@ -53,6 +53,8 @@ app.mount("/UserPageStatic", StaticFiles(directory="../USER_PAGE/frontEnd/static
 @app.post("/logIn")
 def admin_login(admin: schemas.AdminLogin, response: Response, db: Session = Depends(get_db)):
 
+    print("Submitted username:", repr(admin.username))
+
     check_admin = db.query(models.Admin).filter(
         models.Admin.username == admin.username
     ).first()
