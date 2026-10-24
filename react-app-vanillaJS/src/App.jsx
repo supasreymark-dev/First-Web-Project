@@ -59,7 +59,7 @@ function App() {
       
       catch(error){
         console.log(error);
-        window.location.replace(`${API_URL}/error`);
+        window.location.replace(`https://user-login-ocar.onrender.com/pages/error.html`);
         return;
       }
 
