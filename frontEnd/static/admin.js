@@ -119,7 +119,7 @@ logInForm.addEventListener("submit", async (event) => {
 
         if(response.ok){
             alert(`${data.message}`);
-            errorMessage.classList.add("hidden");
+            errorMessage.classList.remove("hidden");
             return window.location.replace("./pages/index.html");
 
         }

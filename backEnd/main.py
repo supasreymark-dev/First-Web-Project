@@ -29,7 +29,8 @@ app.add_middleware(
     allow_methods=["GET", "POST", "UPDATE", "DELETE", "PATCH", "OPTIONS"],
     allow_origins=["http://localhost:5173", "http://127.0.0.1:5173", 
                    "https://user-login-ocar.onrender.com", 
-                   "https://react-user-dashboard-46gr.onrender.com"],
+                   "https://react-user-dashboard-46gr.onrender.com",
+                   "https://admin-5ghb.onrender.com"],
 )
 
 def get_db():
@@ -50,10 +51,12 @@ app.mount("/UserPageStatic", StaticFiles(directory="../USER_PAGE/frontEnd/static
 
 
 @app.post("/logIn")
-def admin_login(admin: schemas.AdminLogin,response: Response, db: Session = Depends(get_db)):
+def admin_login(admin: schemas.AdminLogin, response: Response, db: Session = Depends(get_db)):
+
+    print("Submitted username:", repr(admin.username))
 
     check_admin = db.query(models.Admin).filter(
-        admin.username == models.Admin.username
+        models.Admin.username == admin.username
     ).first()
 
     if check_admin is None:
