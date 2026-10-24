@@ -32,8 +32,8 @@ async function logOut({API_URL}){
 
 
 function Header({username, setTab}){
+    const API_URL = import.meta.env.VITE_API_BASE_URL;
 
-    const API_URL = "http://127.0.0.1:8000";
     // const [activeTab, setActiveTab] = useState("about");
 
 
