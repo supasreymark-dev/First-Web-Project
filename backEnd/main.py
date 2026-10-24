@@ -838,7 +838,7 @@ def admin_login():
 
 @app.get("/error")
 def error():
-    return "https://user-login-ocar.onrender.com/pages/error"
+    return "https://user-login-ocar.onrender.com/pages/error.html"
 
 @app.get("/user")
 def get_user():
