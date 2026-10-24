@@ -87,8 +87,12 @@
 }
 
 @media(max-width:600px) {
-    .body{
-        min-width: 330px;
+    /* .body{ */
+        /* min-width: 330px; */
+    /* } */
+
+    .header hr{
+        margin: 1vw;
     }
 
     .contactLinks{
