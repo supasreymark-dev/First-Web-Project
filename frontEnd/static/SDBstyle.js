@@ -22,6 +22,9 @@ const criticalAlertsLabel = document.getElementById("criticalAlertsLabel");
 
 let adminUsername;
 
+const API_URL = "https://first-web-project-1.onrender.com";
+const admin_URL = "";
+
 async function injectSession() {
 
     try{
@@ -40,7 +43,7 @@ async function injectSession() {
         else if(!response.ok){
             alert("Bad request");
             adminUsername = "";
-            return window.location.href = "/error";
+            return window.location.href = "./../pages/error.html";
         }
         else{
             throw new Error("Server Down");
@@ -75,11 +78,12 @@ logOutBtn.addEventListener("click", async (event) => {
         if(response.ok){
             alert(`Redirecting...`);
             adminUsername = "";
-            return window.location.replace(`/admin`);
+            return window.location.replace(`${admin_URL}`);
         }
         else if(!response.ok){
             adminUsername = "";
             alert("Session expired");
+            return window.location.replace(`${admin_URL}`);
         }
         else{
             throw new Error("Server Down");
@@ -87,6 +91,7 @@ logOutBtn.addEventListener("click", async (event) => {
     }catch(error){
         adminUsername = "";
         alert(error);
+        return window.location.replace(`${admin_URL}`);
     }
 });
 
