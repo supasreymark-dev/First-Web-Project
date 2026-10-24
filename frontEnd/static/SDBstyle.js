@@ -23,7 +23,7 @@ const criticalAlertsLabel = document.getElementById("criticalAlertsLabel");
 let adminUsername;
 
 const API_URL = "https://first-web-project-1.onrender.com";
-const admin_URL = "";
+const admin_URL = "https://admin-5ghb.onrender.com";
 
 async function injectSession() {
 
