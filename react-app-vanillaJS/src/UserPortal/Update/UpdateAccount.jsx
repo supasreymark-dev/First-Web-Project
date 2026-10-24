@@ -1,7 +1,7 @@
 import style from './Update.module.css';
 import { useState, useRef } from 'react';
 
-const API_URL = import.meta.env.VITE_API_BASE_URL;
+const API_URL = "https://first-web-project-1.onrender.com";
 
 
 

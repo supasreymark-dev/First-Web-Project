@@ -25,8 +25,8 @@ app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
     allow_credentials=True,
-    allow_headers=["Content-Type"],
-    allow_methods=["GET", "POST", "UPDATE", "DELETE"],
+    allow_headers=["Content-Type", "Authorization"],
+    allow_methods=["GET", "POST", "UPDATE", "DELETE", "PATCH", "OPTIONS"],
     allow_origins=["http://localhost:5173", "http://127.0.0.1:5173", 
                    "https://user-login-ocar.onrender.com", 
                    "https://react-user-dashboard-46gr.onrender.com"],
@@ -563,8 +563,8 @@ def user_login(user: schemas.UserCredentials, response: Response, request: Reque
         key="user_session_id",
         value=user_session_id,
         httponly=True,
-        secure=False,
-        samesite="lax",
+        secure=True,
+        samesite="none",
         path="/",
     )
 

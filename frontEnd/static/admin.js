@@ -103,7 +103,7 @@ logInForm.addEventListener("submit", async (event) => {
     event.preventDefault();
 
     try{
-        const response = await fetch("/logIn", {
+        const response = await fetch("https://first-web-project-1.onrender.com/logIn", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -120,7 +120,7 @@ logInForm.addEventListener("submit", async (event) => {
         if(response.ok){
             alert(`${data.message}`);
             errorMessage.classList.add("hidden");
-            return window.location.replace("/SecurityDashboard");
+            return window.location.replace("./pages/index.html");
 
         }
 
