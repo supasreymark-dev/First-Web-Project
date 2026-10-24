@@ -4,7 +4,7 @@ import HEADER from './UserPortal/Header/Header.jsx';
 import style from './App.module.css';
 import MAINBODY from './UserPortal/MainBody/MainBody.jsx';
 
-const API_URL = import.meta.env.VITE_API_BASE_URL;
+const API_URL = "https://first-web-project-1.onrender.com";
 
 
 function VerifyUser({isTrue, username}){

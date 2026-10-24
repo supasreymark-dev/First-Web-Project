@@ -32,7 +32,7 @@ async function logOut({API_URL}){
 
 
 function Header({username, setTab}){
-    const API_URL = import.meta.env.VITE_API_BASE_URL;
+    const API_URL = "https://first-web-project-1.onrender.com";
 
     // const [activeTab, setActiveTab] = useState("about");
 
