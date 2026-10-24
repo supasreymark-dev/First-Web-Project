@@ -5,6 +5,8 @@ const loginBtn = document.getElementById("log-in-btn");
 const label = document.querySelectorAll("label");
 const errorMessage = document.getElementById("errorMessage");
 
+
+
 async function checkIP() {
     
     try{
@@ -28,7 +30,7 @@ async function checkIP() {
                 console.log(labels);
             });
 
-            window.location.replace("/RestrictIP");
+            window.location.replace("./../pages/error.html");
             return;
         }
 
@@ -71,7 +73,7 @@ LogInForm.addEventListener("submit", async (event) => {
             errorMessage.classList.add("hidden");
             console.log(data.message);
             console.log(data.isTrue);
-            window.location.replace("http://127.0.0.1:5173")
+            window.location.replace("https://react-user-dashboard-46gr.onrender.com")
             return;
         }
 

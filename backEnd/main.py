@@ -25,9 +25,11 @@ app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
     allow_credentials=True,
-    allow_headers=["*"],
-    allow_methods=["*"],
-    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
+    allow_headers=["Content-Type"],
+    allow_methods=["GET", "POST", "UPDATE", "DELETE"],
+    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173", 
+                   "https://user-login-ocar.onrender.com", 
+                   "https://react-user-dashboard-46gr.onrender.com"],
 )
 
 def get_db():
@@ -82,8 +84,8 @@ def admin_login(admin: schemas.AdminLogin,response: Response, db: Session = Depe
         key="session_id",
         value=session_id,
         httponly=True,
-        secure=False,
-        samesite="lax",
+        secure=True,
+        samesite="none",
         path="/",
     )
 
@@ -836,7 +838,7 @@ def admin_login():
 
 @app.get("/error")
 def error():
-    return FileResponse("../frontEnd/pages/error.html")
+    return "https://user-login-ocar.onrender.com/pages/error.html"
 
 @app.get("/user")
 def get_user():
