@@ -29,7 +29,8 @@ app.add_middleware(
     allow_methods=["GET", "POST", "UPDATE", "DELETE", "PATCH", "OPTIONS"],
     allow_origins=["http://localhost:5173", "http://127.0.0.1:5173", 
                    "https://user-login-ocar.onrender.com", 
-                   "https://react-user-dashboard-46gr.onrender.com"],
+                   "https://react-user-dashboard-46gr.onrender.com",
+                   "https://admin-5ghb.onrender.com"],
 )
 
 def get_db():
