@@ -27,7 +27,7 @@ LoginForm.addEventListener("submit", async (event) => {
             }
 
             alert("Signing Up successfully");
-            window.location.replace("/user");
+            window.location.replace("./../index.html");
             return;
 
         }catch(error){
