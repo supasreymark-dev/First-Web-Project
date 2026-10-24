@@ -51,10 +51,10 @@ app.mount("/UserPageStatic", StaticFiles(directory="../USER_PAGE/frontEnd/static
 
 
 @app.post("/logIn")
-def admin_login(admin: schemas.AdminLogin,response: Response, db: Session = Depends(get_db)):
+def admin_login(admin: schemas.AdminLogin, response: Response, db: Session = Depends(get_db)):
 
     check_admin = db.query(models.Admin).filter(
-        admin.username == models.Admin.username
+        models.Admin.username == admin.username
     ).first()
 
     if check_admin is None:
