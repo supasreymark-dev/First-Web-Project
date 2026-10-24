@@ -563,8 +563,8 @@ def user_login(user: schemas.UserCredentials, response: Response, request: Reque
         key="user_session_id",
         value=user_session_id,
         httponly=True,
-        secure=False,
-        samesite="lax",
+        secure=True,
+        samesite="none",
         path="/",
     )
 
