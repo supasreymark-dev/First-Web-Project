@@ -25,9 +25,9 @@ app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
     allow_credentials=True,
-    allow_headers=["*"],
-    allow_methods=["*"],
-    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
+    allow_headers=["Content-Type"],
+    allow_methods=["GET", "POST", "UPDATE", "DELETE"],
+    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173", ""],
 )
 
 def get_db():
