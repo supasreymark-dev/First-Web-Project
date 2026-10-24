@@ -3,6 +3,7 @@ import style from './Delete.module.css';
 import {IoIosWarning} from 'react-icons/io';
 
 const API_URL = "https://first-web-project-1.onrender.com";
+const login_URL = "https://user-login-ocar.onrender.com";
 
 async function deleteAccount(passCloseDialog){
     try{
@@ -21,7 +22,7 @@ async function deleteAccount(passCloseDialog){
         }
 
         alert("Redirecting");
-        window.location.replace(`${API_URL}/user`);
+        window.location.replace(`${login_URL}`);
         return;
 
     }

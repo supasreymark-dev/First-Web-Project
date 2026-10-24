@@ -2,6 +2,9 @@ import style from './Header.module.css';
 import { useState } from 'react';
 import MainBody from './../MainBody/MainBody.jsx';
 
+    
+const login_URL = "https://user-login-ocar.onrender.com";
+
 
 async function logOut({API_URL}){
     console.log(API_URL);
@@ -15,17 +18,17 @@ async function logOut({API_URL}){
 
         if(response.ok){
             alert(`Redirecting...`);
-            window.location.replace(`${API_URL}/user`);
+            window.location.replace(`${login_URL}`);
             return;
         }
         else{
             alert(`Session expired!`);
-            window.location.replace(`${API_URL}/user`);
+            window.location.replace(`${login_URL}`);
             return;
         }
     }catch(error){
         alert(error);
-        window.location.replace(`${API_URL}/user`);
+        window.location.replace(`${login_URL}`);
         return;
     }
 }
@@ -33,7 +36,6 @@ async function logOut({API_URL}){
 
 function Header({username, setTab}){
     const API_URL = "https://first-web-project-1.onrender.com";
-
     // const [activeTab, setActiveTab] = useState("about");
 
 
