@@ -19,19 +19,19 @@ function Contact(){
                         <span className={style.logo}>
                             {<IoIosMail/>}
                         </span>
-                        <a href="#">supasreymark@gmail.com</a>
+                        <a href="mailto:supasreymark@gmail.com" target='_blank'>supasreymark@gmail.com</a>
                     </div>
                     <div>
                         <span className={style.logo}>{<FaFacebook/>}</span>
-                        <a href="#">Reymark Supas</a>
+                        <a href="https://www.facebook.com/reymark.nawagas" target='_blank'>Reymark Supas</a>
                     </div>
                     <div>
                         <span className={style.logo}>{<FaLinkedin/>}</span>
-                        <a href="#">LinkedIn</a>
+                        <a href="https://www.linkedin.com/in/reymark-supas-550a1232b/" target='_blank'>LinkedIn</a>
                     </div>
                     <div>
                         <span className={style.logo}>{<IoIosCall/>}</span>
-                        <a href="#">09308528018</a>
+                        <a href="tel:09308528018" target='_blank'>09308528018</a>
                     </div>
                 </div>
             </div>
